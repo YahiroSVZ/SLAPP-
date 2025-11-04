@@ -1,0 +1,7 @@
+{
+  "name": "Monterrey Event Hunter",
+  "description": "An event aggregator for Monterrey and its metropolitan area, allowing users to discover events classified by interest, save favorites, and view event locations on a map. Includes an admin panel for event management.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

@@ -1,0 +1,123 @@
+
+import { Event, Category } from '../types';
+
+const mockEvents: Event[] = [
+  {
+    id: 1,
+    title: 'Festival de Luz y Sonido en Parque Fundidora',
+    description: 'Un espectáculo de luces y música en el corazón de Monterrey. Ideal para toda la familia.',
+    date: '2024-10-26',
+    location: 'Parque Fundidora, Monterrey',
+    imageUrl: 'https://picsum.photos/seed/fundidora/400/300',
+    category: Category.FAMILY,
+    coords: { lat: 25.6775, lng: -100.2863 },
+    status: 'approved',
+  },
+  {
+    id: 2,
+    title: 'Concierto de Rock Alternativo',
+    description: 'Las mejores bandas de rock de la escena local se presentan en el Nodriza Estudio.',
+    date: '2024-11-15',
+    location: 'Nodriza Estudio, Monterrey',
+    imageUrl: 'https://picsum.photos/seed/rock/400/300',
+    category: Category.FUN,
+    coords: { lat: 25.669, lng: -100.31_},
+    status: 'approved',
+  },
+  {
+    id: 3,
+    title: 'Maratón de Monterrey 42K',
+    description: 'El maratón anual de la ciudad. ¡Prepárate para correr!',
+    date: '2024-12-08',
+    location: 'Macroplaza, Monterrey',
+    imageUrl: 'https://picsum.photos/seed/maraton/400/300',
+    category: Category.SPORTS,
+    coords: { lat: 25.6694, lng: -100.3094 },
+    status: 'approved',
+  },
+  {
+    id: 4,
+    title: 'Monterrey Fashion Week',
+    description: 'Presentación de las últimas colecciones de diseñadores emergentes y establecidos.',
+    date: '2024-10-18',
+    location: 'Pabellón M, Monterrey',
+    imageUrl: 'https://picsum.photos/seed/fashion/400/300',
+    category: Category.FASHION,
+    coords: { lat: 25.6702, lng: -100.3168 },
+    status: 'approved',
+  },
+  {
+    id: 5,
+    title: 'Conferencia de Tech & Startups',
+    description: 'Un evento para conectar con emprendedores, inversionistas y líderes de la industria tecnológica.',
+    date: '2024-11-05',
+    location: 'Cintermex, Monterrey',
+    imageUrl: 'https://picsum.photos/seed/tech/400/300',
+    category: Category.NETWORKING,
+    coords: { lat: 25.6795, lng: -100.2882 },
+    status: 'approved',
+  },
+  {
+    id: 6,
+    title: 'Retiro de Yoga y Meditación',
+    description: 'Un fin de semana para desconectar y encontrar tu paz interior en las montañas de Santiago.',
+    date: '2024-11-22',
+    location: 'Santiago, Nuevo León',
+    imageUrl: 'https://picsum.photos/seed/yoga/400/300',
+    category: Category.WELLNESS,
+    coords: { lat: 25.4281, lng: -100.145 },
+    status: 'approved',
+  },
+  {
+    id: 7,
+    title: 'Exposición de Arte Contemporáneo',
+    description: 'Descubre las obras de artistas locales en el Museo de Arte Contemporáneo (MARCO).',
+    date: '2024-10-29',
+    location: 'MARCO, Monterrey',
+    imageUrl: 'https://picsum.photos/seed/arte/400/300',
+    category: Category.CULTURE,
+    coords: { lat: 25.6655, lng: -100.3093 },
+    status: 'approved',
+  },
+  {
+    id: 8,
+    title: 'Experiencia Gastronómica Secreta',
+    description: 'Una cena pop-up en una ubicación secreta con un menú degustación de 5 tiempos.',
+    date: '2024-11-09',
+    location: 'Ubicación Secreta, San Pedro Garza García',
+    imageUrl: 'https://picsum.photos/seed/gastro/400/300',
+    category: Category.XPERIENCE,
+    coords: { lat: 25.651, lng: -100.38 },
+    status: 'approved',
+  },
+  {
+    id: 9,
+    title: 'Mercado de Artesanos Locales',
+    description: 'Encuentra productos únicos y apoya a los artesanos de la región. Música en vivo y comida.',
+    date: '2024-11-02',
+    location: 'Barrio Antiguo, Monterrey',
+    imageUrl: 'https://picsum.photos/seed/mercado/400/300',
+    category: Category.CULTURE,
+    coords: { lat: 25.6672, lng: -100.3082 },
+    status: 'pending',
+  },
+  {
+    id: 10,
+    title: 'Torneo de eSports Mty',
+    description: 'Competencia de los videojuegos más populares con grandes premios. Abierto a todos los niveles.',
+    date: '2024-11-30',
+    location: 'Arena Monterrey',
+    imageUrl: 'https://picsum.photos/seed/esports/400/300',
+    category: Category.UNCATEGORIZED,
+    coords: { lat: 25.6806, lng: -100.2858 },
+    status: 'pending',
+  },
+];
+
+export const fetchEvents = (): Promise<Event[]> => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(mockEvents);
+    }, 500);
+  });
+};
